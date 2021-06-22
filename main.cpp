@@ -5,6 +5,7 @@
 using std::cout;
 using std::cin;
 using std::setprecision;
+using std::setw;
 
 int main() {
   float interest_rate= 0.0;
@@ -36,7 +37,7 @@ int main() {
   
   float total_interest = principal * (interest_rate / 100) ;
   
-  cout << "Interest rate:     " << interest_rate << "%\n";
-  cout << "Principal:         $" << principal << "\n";
-  cout << "Interest + fees:   $" << setprecision (4) << (loan_fee + total_interest) << "\n";
+  cout << "Interest rate: " << setw (14)<<interest_rate << "%\n";
+  cout << "Principal:" << setw(18) << "$" << principal << "\n";
+  cout << "Interest + fees:" << setw(12) << "$" << setprecision (4) << (loan_fee + total_interest) << "\n";
 }
